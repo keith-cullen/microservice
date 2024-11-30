@@ -1,0 +1,23 @@
+# Go workspace files
+go/go.work
+go/go.work.sum
+
+# Rust target directory
+rust/target
+
+# The executables
+go/microservice
+rust/microservice
+
+# The databases
+go/store.db
+rust/store.db
+
+# Restler files
+go/Compile/
+go/FuzzLean/
+go/RestlerLogs/
+go/Test/
+go/log.html
+go/output.xml
+go/report.html
