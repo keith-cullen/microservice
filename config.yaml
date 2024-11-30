@@ -1,0 +1,7 @@
+DatabaseFile: "file:../store.db?_fk=1"
+Cert: "../certs/server_cert.pem"
+Privkey: "../certs/server_privkey.pem"
+Addr: "0.0.0.0:4443"
+CorsOrigin: "https://localhost"
+ReqPerSec: "10"
+BurstSize: "20"
