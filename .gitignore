@@ -1,0 +1,26 @@
+# Go workspace files
+go/go.work
+go/go.work.sum
+
+# Rust target directory
+rust-axum/target
+rust-actix-web/target
+
+# The executables
+go/microservice
+rust/microservice
+
+# The databases
+store.db
+
+# Robot files
+log.html
+output.xml
+report.html
+
+# Restler files
+Compile/
+Fuzz/
+FuzzLean/
+RestlerLogs/
+Test/

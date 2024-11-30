@@ -1,0 +1,28 @@
+syntax = "proto3";
+package app;
+
+option go_package = "./";
+
+import "google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
+
+service App {
+	rpc get(Req) returns (Resp) {
+		option (google.api.http) = {
+			get: "/v1/get"
+		};
+	}
+	rpc set(Req) returns (google.protobuf.BoolValue) {
+		option (google.api.http) = {
+			post: "/v1/set"
+		};
+	}
+}
+
+message Req {
+	string name = 1;
+}
+
+message Resp {
+	string value = 1;
+}
