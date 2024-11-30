@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+    title: App API
+    version: 0.0.1
+paths:
+    /v1/get:
+        get:
+            tags:
+                - App
+            operationId: App_Get
+            parameters:
+                - name: name
+                  in: query
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Resp'
+                default:
+                    description: Default error response
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Resp'
+    /v1/set:
+        post:
+            tags:
+                - App
+            operationId: App_Set
+            parameters:
+                - name: name
+                  in: query
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Resp'
+                default:
+                    description: Default error response
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Resp'
+components:
+    schemas:
+        Resp:
+            type: object
+            properties:
+                message:
+                    type: string
+tags:
+    - name: App
